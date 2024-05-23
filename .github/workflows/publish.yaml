@@ -21,9 +21,9 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - name: Create a Release PR or Publish
-          id: changesets
-          uses: changesets/action@v1
-          with:
-            publish: pnpm run build
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
